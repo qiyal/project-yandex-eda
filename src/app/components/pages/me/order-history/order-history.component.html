@@ -2,9 +2,19 @@
 
   <div class="order-box">
 
-    <div class="message">
+    <div class="message" *ngIf="orders.length === 0">
       <p class="bold">У вас пока нет заказов</p>
       <p>Как только вы сделаете свой первый заказ, вы увидите его детали тут</p>
+    </div>
+
+
+    <div>
+      <h2 class="bold">Orders</h2>
+      <div class="orders-list">
+
+        <app-order-card [style.margin-bottom]="'20px'" [order]="order" *ngFor="let order of orders"></app-order-card>
+
+      </div>
     </div>
 
     <div class="order-card">

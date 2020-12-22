@@ -9,7 +9,7 @@
     {{item.description}}
   </div>
 
-  <div class="card-image">
+  <div class="card-image" *ngIf="item.imageUrl">
     <img [src]="item.imageUrl" alt="Food image">
   </div>
 

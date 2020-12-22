@@ -13,14 +13,23 @@
   </label>
 
   <br>
+  <br>
+
+  <label>Phone Number:
+    <input type="text" [(ngModel)]="data.customer.phoneNumber" placeholder="Phone Number">
+  </label>
+
+  <br>
 
   <h4>Genre: </h4>
   <mat-form-field appearance="fill">
     <mat-label>Choose an option</mat-label>
+
     <mat-select [ngModel]="data.customer.genre">
       <mat-option value="male">Male</mat-option>
       <mat-option value="female">Female</mat-option>
     </mat-select>
+
   </mat-form-field>
 </mat-dialog-content>
 

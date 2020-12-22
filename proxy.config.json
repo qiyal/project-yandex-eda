@@ -23,13 +23,31 @@
     "changeOrigin": true
   },
 
+  "/combos": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  },
+
   "/sushi": {
     "target": "http://localhost:3000",
     "secure": false,
     "changeOrigin": true
   },
 
+  "/burgers": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  },
+
   "/drinks": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  },
+
+  "/orders": {
     "target": "http://localhost:3000",
     "secure": false,
     "changeOrigin": true

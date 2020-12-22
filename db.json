@@ -4,9 +4,9 @@
       "id": 1,
       "email": "nico@gmail.com",
       "password": "12345",
-      "firstName": "Yerbolats",
+      "firstName": "Yerbolat",
       "lastName": "Pazyl",
-      "phoneNumber": "77052627972",
+      "phoneNumber": "77052627932",
       "genre": "male",
       "cashBack": 0,
       "urlAvatar": "assets/images/users/avatar/user1.jpg"
@@ -37,9 +37,20 @@
         "sushi",
         "drinks"
       ]
+    },
+    {
+      "id": 2,
+      "name": "Mr. Burger",
+      "limit": 1500,
+      "freeDeliveryValue": 1500,
+      "deliverValue": 1400,
+      "rating": 4.4,
+      "productList": [
+        "combos",
+        "burgers"
+      ]
     }
   ],
-
   "sets": [
     {
       "id": 1,
@@ -69,7 +80,6 @@
       "imageUrl": "assets/images/food/card-food/item3.jpeg"
     }
   ],
-
   "sushi": [
     {
       "id": 1,
@@ -90,7 +100,6 @@
       "imageUrl": "assets/images/food/card-food/item5.jpeg"
     }
   ],
-
   "drinks": [
     {
       "id": 1,
@@ -118,6 +127,107 @@
       "price": 490,
       "description": "",
       "imageUrl": "assets/images/food/card-food/item8.jpeg"
+    }
+  ],
+  "combos": [
+    {
+      "id": 1,
+      "restaurantId": 2,
+      "name": "Комбо Бургер Мистер",
+      "mass": 340,
+      "price": 1800,
+      "description": "Бургер Мистер с говядиной, картофель фри малый, напиток на выбор",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "restaurantId": 2,
+      "name": "Комбо Бургер Мачо",
+      "mass": 340,
+      "price": 1400,
+      "description": "Бургер Мачо с говяжьей котлетой, картофель фри малый, напиток на выбор",
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "restaurantId": 2,
+      "name": "Комбо Чизбургер Мачо",
+      "mass": 340,
+      "price": 1500,
+      "description": "Чизбургер Мачо с говяжьей котлетой, картофель фри малый, напиток на выбор",
+      "imageUrl": ""
+    }
+  ],
+  "burgers": [
+    {
+      "id": 1,
+      "restaurantId": 2,
+      "name": "Бургер Мистер",
+      "mass": 220,
+      "price": 1200,
+      "description": "Рубленая говяжья нарезка, лист салата, помидор, огурец, булочка, кетчуп, майонез",
+      "imageUrl": "assets/images/food/card-food/item9.jpeg"
+    },
+    {
+      "id": 2,
+      "restaurantId": 2,
+      "name": "Бургер Мачо",
+      "mass": 220,
+      "price": 900,
+      "description": "Говяжья котлета, лист салата, помидор, огурец, булочка, кетчуп, майонез",
+      "imageUrl": "assets/images/food/card-food/item10.jpeg"
+    },
+    {
+      "id": 3,
+      "restaurantId": 2,
+      "name": "Чизбургер Мачо",
+      "mass": 220,
+      "price": 1000,
+      "description": "Говяжья котлета, сыр, лист салата, помидор, огурец, булочка, кетчуп, майонез",
+      "imageUrl": "assets/images/food/card-food/item11.jpeg"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customersId": 1,
+      "date": "2020-12-22T21:22:17.077Z",
+      "items": [
+        {
+          "itemName": "Сет Нори",
+          "itemQ": 2,
+          "itemPrice": 5390
+        },
+        {
+          "itemName": "Сет Токио",
+          "itemQ": 1,
+          "itemPrice": 7990
+        },
+        {
+          "itemName": "Coca-Cola",
+          "itemQ": 1,
+          "itemPrice": 490
+        }
+      ],
+      "cost": 19260
+    },
+    {
+      "id": 2,
+      "customersId": 1,
+      "date": "2020-12-22T21:37:35.251Z",
+      "items": [
+        {
+          "itemName": "Бургер Мистер",
+          "itemQ": 1,
+          "itemPrice": 1200
+        },
+        {
+          "itemName": "Комбо Бургер Мачо",
+          "itemQ": 2,
+          "itemPrice": 1400
+        }
+      ],
+      "cost": 4000
     }
   ]
 }

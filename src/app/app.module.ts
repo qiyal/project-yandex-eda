@@ -24,6 +24,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {RestaurantService} from "./services/restaurant.service";
+import {OrderService} from './services/order.service';
 
 @NgModule({
     declarations: [
@@ -35,7 +36,7 @@ import {RestaurantService} from "./services/restaurant.service";
         HomeComponent,
         RestaurantCardComponent,
         CarouselComponent,
-        ProfileInfoEditComponent,
+        ProfileInfoEditComponent
     ],
     imports: [
         BrowserModule,
@@ -52,10 +53,11 @@ import {RestaurantService} from "./services/restaurant.service";
         MatMenuModule
     ],
     providers: [
-        AuthService,
-        CustomerService,
-        AvatarImageService,
-      RestaurantService
+      AuthService,
+      AvatarImageService,
+      CustomerService,
+      RestaurantService,
+      OrderService
     ],
     bootstrap: [
         AppComponent

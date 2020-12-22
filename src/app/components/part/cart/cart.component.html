@@ -7,13 +7,24 @@
 
     <div class="cart-items">
 
-      <div class="cart-item" *ngFor="let item of getItems()">
-        <div>
-          {{item.item.name}}
+      <div class="cart-item" *ngFor="let item of getItems(); let i = index; let even_ = even">
+
+        <div class="cart-item-body">
+
+          <div class="cart-item-name">
+            <span>{{i + 1}}) </span>{{item.item.name}}
+          </div>
+
+          <div class="cart-btns">
+            <button (click)="decrement(i)">-</button>
+
+            <div>{{item.q}}</div>
+
+            <button (click)="increment(i)">+</button>
+          </div>
+
         </div>
-        <div>
-          {{item.q}}
-        </div>
+
       </div>
 
     </div>
@@ -24,7 +35,7 @@
   </div>
 
   <div class="cart-btn">
-    <button>Оформить заказ</button>
+    <button (click)="doOrder()" [disabled]="isDisabled()">Оформить заказ</button>
   </div>
 
 </div>

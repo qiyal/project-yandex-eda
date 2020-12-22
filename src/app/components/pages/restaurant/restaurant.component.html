@@ -106,7 +106,7 @@
                 <h2 [id]="product.tagName">{{product.tagName}}</h2>
 
                 <div class="list-of-items">
-                  <app-food-card (click)="addToCart(item)" *ngFor="let item of product.items" [style.margin]="'15px 0'" [item]="item"></app-food-card>
+                  <app-food-card (click)="addToCart(item, product.tagName)" *ngFor="let item of product.items" [style.margin]="'15px 0'" [item]="item"></app-food-card>
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@
         </div>
 
         <div class="simple-child">
-          <app-cart></app-cart>
+          <app-cart [restaurant]="restaurant"></app-cart>
         </div>
       </div>
 

@@ -17,6 +17,29 @@
 
     .cart-items {
       height: 460px;
+      box-sizing: border-box;
+      padding: 0 20px;
+
+      .cart-item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 0;
+
+        .cart-item-body {
+          display: flex;
+          justify-content: space-between;
+
+          .cart-item-name {
+
+          }
+
+          .cart-btns {
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
     }
 
     .cart-info {

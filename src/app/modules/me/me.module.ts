@@ -10,6 +10,8 @@ import {MyPromoCodesComponent} from '../../components/pages/me/my-promo-codes/my
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MeRoutingModule,
     MatIconModule,
     MatTableModule,
+    MatTabsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class MeModule { }

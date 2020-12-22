@@ -1,0 +1,15 @@
+<div class="cart-order">
+
+  <div class="box">
+    <div class="bold">Items: </div>
+
+    <div *ngFor="let item of order.items" class="list-of-items">
+      {{item.itemName + ' x ' + item.itemQ + ' = ' + (item.itemPrice * item.itemQ)}}
+    </div>
+  </div>
+
+  <div class="box-price"><span class="bold">Cost:</span> {{ order.cost }}</div>
+
+  <div class="box-date"><span class="bold">Date:</span> {{ order.date | date }}</div>
+
+</div>

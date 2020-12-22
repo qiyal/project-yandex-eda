@@ -48,7 +48,7 @@ export class RestaurantComponent implements OnInit {
     });
   }
 
-  addToCart(item: Item) {
-    this.cartService.addItem(item);
+  addToCart(item: Item, api: string) {
+    this.cartService.addItem(item, api);
   }
 }

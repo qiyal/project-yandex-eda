@@ -10,16 +10,21 @@
     .message {
       text-align: center;
 
-      .bold {
-        font-weight: bold;
-        font-size: 1.5rem;
-        color: #000;
-      }
-
       p {
         color: rgba(32,33,37,0.64);
         font-size: 1.2rem;
       }
     }
   }
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column-reverse;
 }

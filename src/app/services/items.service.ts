@@ -13,4 +13,8 @@ export class ItemsService {
   getItems(restaurantId: number, link: string): Observable<Item[]> {
     return this.http.get<Item[]>(link + `?restaurantId=${restaurantId}`);
   }
+
+  getItem(api: string, itemId: number): Observable<Item> {
+    return this.http.get<Item>(api + `/${itemId}`);
+  }
 }

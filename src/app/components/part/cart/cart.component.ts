@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {CartService} from "../../../services/cart.service";
+import {Component, Input, OnInit} from '@angular/core';
+import {CartService} from '../../../services/cart.service';
+import {Restaurant} from '../../../models/restaurant';
+import {CartMap} from '../../../models/cart-map';
 
 @Component({
   selector: 'app-cart',
@@ -7,16 +9,19 @@ import {CartService} from "../../../services/cart.service";
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  items: CartMap[] = [];
+  totalCost = 0;
+  @Input() restaurant: Restaurant;
 
   constructor(
-    private cartService: CartService
+    private cartService: CartService,
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   getItems() {
-    return this.cartService.cart;
+    this.items = this.cartService.cart;
+    return this.items;
   }
 
   getTotalCost() {
@@ -26,7 +31,38 @@ export class CartComponent implements OnInit {
       cost += item.item.price * item.q;
     }
 
-    return cost;
+    this.totalCost = cost;
+
+    return this.totalCost;
   }
 
+  decrement(index: number) {
+    if (this.items[index].q === 1) {
+      let newItemsArray: CartMap[] = [];
+
+      for (const item of this.items) {
+        if (this.items[index] !== item) {
+          newItemsArray.push(item);
+        }
+      }
+
+      this.cartService.cart = newItemsArray;
+    } else {
+      this.items[index].q--;
+      this.cartService.cart = this.items;
+    }
+  }
+
+  increment(index: number) {
+    this.items[index].q++;
+    this.cartService.cart = this.items;
+  }
+
+  isDisabled() {
+    return this.totalCost < this.restaurant.limit;
+  }
+
+  doOrder() {
+    this.cartService.doOrder();
+  }
 }
