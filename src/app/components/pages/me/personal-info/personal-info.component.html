@@ -1,0 +1,35 @@
+<div class="body">
+
+  <div class="flex">
+
+    <div class="l">
+
+      <div class="img-body">
+        <img [src]="customer.urlAvatar" alt="Profile avatar image">
+      </div>
+
+      <div class="btn-body">
+        <button (click)="openDialog()">edit</button>
+      </div>
+
+    </div>
+
+    <div class="r">
+      <div class="full-name">
+        {{customer.firstName + ' ' + customer.lastName}}
+      </div>
+      <div class="other-info">
+        <div class="info">
+          <p class="p-bold">Email:</p>
+          <p class="p-simple">{{customer.email}}</p>
+        </div>
+        <div class="info">
+          <p class="p-bold">Phone number:</p>
+          <p class="p-simple">{{customer.phoneNumber}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

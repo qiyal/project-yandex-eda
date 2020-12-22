@@ -1,0 +1,37 @@
+{
+  "/customers": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  },
+
+  "/admins": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  },
+
+  "/restaurants": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  },
+
+  "/sets": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  },
+
+  "/sushi": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  },
+
+  "/drinks": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

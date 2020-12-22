@@ -1,0 +1,124 @@
+<main>
+  <div class="wrapper">
+    <div class="content">
+
+      <div class="flex-box">
+
+        <div class="big-child">
+          <div class="content-title" [style.background-image]="imageUrl">
+
+            <div class="title-box">
+              <div class="rating-box">
+                <mat-icon class="icon-color" aria-hidden="false" aria-label="grade icon">grade</mat-icon>
+                {{restaurant.rating}}
+              </div>
+
+              <div>
+                <h1>
+                  {{ restaurant.name }}
+                </h1>
+              </div>
+
+              <div class="devide-line"></div>
+
+              <div class="child-flex">
+
+                <div class="child ch-one">
+
+                  <div class="btn-box">
+
+                    <button class="btn"  mat-button [matMenuTriggerFor]="menu">
+
+                      <div class="svg-icon">
+                        <mat-icon class="icon-color" aria-hidden="false" aria-label="Example home icon">local_shipping</mat-icon>
+                      </div>
+
+                      <div class="text-desc">
+                        <div [style.font-size]="'14px'">
+                          Условия доставки
+                        </div>
+
+                        <div [style.font-size]="'16px'">
+                          Бесплатно
+                        </div>
+                      </div>
+
+                    </button>
+
+                    <mat-menu #menu="matMenu">
+                      <button mat-menu-item class="mat-menu-body">
+
+                        <h3>Условия доставки</h3>
+                        <p class="grey">Доставку выполнят партнёры Яндекс.Еды</p>
+                        <p class="p-flex"><span>а заказ от {{restaurant.limit}} ₸</span> <span>0 ₸</span></p>
+
+                        <h3>Лимиты</h3>
+                        <p>Минимальная стоимость заказа {{restaurant.limit}} ₸</p>
+                      </button>
+                    </mat-menu>
+
+                  </div>
+
+                  <div class="price-deliver">
+                    <span [style.font-size]="'14px'">Заказ от</span>
+                    <span [style.font-size]="'16px'">{{restaurant.freeDeliveryValue}} ₸</span>
+                  </div>
+
+                </div>
+
+                <div class="child">
+                  <button class="btn"  mat-button [matMenuTriggerFor]="menu2">
+
+                    <div class="text-about">
+                      <div [style.font-size]="'14px'">
+                        Информация о ресторане
+                      </div>
+                    </div>
+
+                    <div class="info-icon"></div>
+
+                  </button>
+
+                  <mat-menu #menu2="matMenu">
+                    <button mat-menu-item class="mat-menu-body">
+                      <h3>{{restaurant.name}}</h3>
+                      <p class="grey">Режим работы: с 10:00 до 21:45</p>
+                      <p class="p-flex">Японская ₸₸</p>
+                    </button>
+                  </mat-menu>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="menus-box">
+
+            <div class="menu-tabs">
+<!--              <span [ngClass]="{'active-tab': tabIndex === 1}" (click)="tabIndex = 1">Сеты</span>-->
+              <a [href]="'/restaurant/' + restaurantId + '#' + tag.tagName"   *ngFor="let tag of products; let i = index" [ngClass]="{'active-tab': tabIndex === i}" (click)="tabIndex = i">{{ tag.tagName }}</a>
+            </div>
+
+            <div class="menu-item-list">
+              <div *ngFor="let product of products">
+                <h2 [id]="product.tagName">{{product.tagName}}</h2>
+
+                <div class="list-of-items">
+                  <app-food-card (click)="addToCart(item)" *ngFor="let item of product.items" [style.margin]="'15px 0'" [item]="item"></app-food-card>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="simple-child">
+          <app-cart></app-cart>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

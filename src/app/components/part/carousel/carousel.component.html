@@ -1,0 +1,19 @@
+<div class="carousel-body">
+  <h2>Sales</h2>
+
+  <div class="card-box">
+    <div class="flex-box">
+
+        <button class="btn btn-l" (click)="prevSales()" *ngIf="showIndex !== 3">
+          <mat-icon>navigate_before</mat-icon>
+        </button>
+
+      <app-restaurant-card [hidden]="!isShow(i)" *ngFor="let restaurant of restaurants; let i = index" [restaurant]="restaurant"></app-restaurant-card>
+
+        <button class="btn btn-r" (click)="nextSales()" *ngIf="showIndex < restaurants.length">
+          <mat-icon>navigate_next</mat-icon>
+        </button>
+
+    </div>
+  </div>
+</div>

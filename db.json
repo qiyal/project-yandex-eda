@@ -1,0 +1,123 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "email": "nico@gmail.com",
+      "password": "12345",
+      "firstName": "Yerbolats",
+      "lastName": "Pazyl",
+      "phoneNumber": "77052627972",
+      "genre": "male",
+      "cashBack": 0,
+      "urlAvatar": "assets/images/users/avatar/user1.jpg"
+    },
+    {
+      "email": "pazyl@gmail.com",
+      "password": "123",
+      "confirmPassword": "123",
+      "firstName": "Nico",
+      "lastName": "",
+      "phoneNumber": "87081233212",
+      "genre": null,
+      "cashBack": 0,
+      "urlAvatar": "assets/images/users/avatar/user0.jpg",
+      "id": 2
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Nori",
+      "limit": 1500,
+      "freeDeliveryValue": 1500,
+      "deliverValue": 1400,
+      "rating": 4.8,
+      "productList": [
+        "sets",
+        "sushi",
+        "drinks"
+      ]
+    }
+  ],
+
+  "sets": [
+    {
+      "id": 1,
+      "restaurantId": 1,
+      "name": "Сет Киото",
+      "mass": 900,
+      "price": 3990,
+      "description": "Филадельфия, Сяке темпура, Эби темпура, Цезарь хот, Кола (1 л)",
+      "imageUrl": "assets/images/food/card-food/item1.jpeg"
+    },
+    {
+      "id": 2,
+      "restaurantId": 1,
+      "name": "Сет Нори",
+      "mass": 1300,
+      "price": 5390,
+      "description": "Филадельфия, Америка, Бонито, Цезарь темпура, Сяке маке, Гунканы (2 шт.), Кола (1 л)",
+      "imageUrl": "assets/images/food/card-food/item2.jpeg"
+    },
+    {
+      "id": 3,
+      "restaurantId": 1,
+      "name": "Сет Токио",
+      "mass": 2800,
+      "price": 7990,
+      "description": "Филадельфия, Эби темпура, Калифорния, Цезарь хот, Амстердам, Гункан, Капа Маки, Сяке Маки, Токио хот, Cola (1 л)",
+      "imageUrl": "assets/images/food/card-food/item3.jpeg"
+    }
+  ],
+
+  "sushi": [
+    {
+      "id": 1,
+      "restaurantId": 1,
+      "name": "Филадельфия",
+      "mass": 220,
+      "price": 1490,
+      "description": "Рис, нори, сыр креметте, норвежская семга",
+      "imageUrl": "assets/images/food/card-food/item4.jpeg"
+    },
+    {
+      "id": 2,
+      "restaurantId": 1,
+      "name": "Цезарь темпура",
+      "mass": 250,
+      "price": 1490,
+      "description": "Рис, нори, курица, помидор, майонез, терияки соус",
+      "imageUrl": "assets/images/food/card-food/item5.jpeg"
+    }
+  ],
+
+  "drinks": [
+    {
+      "id": 1,
+      "restaurantId": 1,
+      "name": "Coca-Cola",
+      "mass": 1000,
+      "price": 490,
+      "description": "",
+      "imageUrl": "assets/images/food/card-food/item6.jpeg"
+    },
+    {
+      "id": 2,
+      "restaurantId": 1,
+      "name": "Coca-Cola",
+      "mass": 1000,
+      "price": 490,
+      "description": "",
+      "imageUrl": "assets/images/food/card-food/item7.jpeg"
+    },
+    {
+      "id": 3,
+      "restaurantId": 1,
+      "name": "Coca-Cola",
+      "mass": 1000,
+      "price": 490,
+      "description": "",
+      "imageUrl": "assets/images/food/card-food/item8.jpeg"
+    }
+  ]
+}

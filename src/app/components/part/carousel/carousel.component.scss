@@ -1,0 +1,60 @@
+.carousel-body {
+  box-sizing: border-box;
+  padding: 25px 0;
+  //border: 1px solid red;
+  margin: 0;
+  position: relative;
+
+  h2 {
+    margin-left: 100px;
+    font-size: 24px;
+    line-height: 20px;
+  }
+
+  .card-box {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 100px 0 100px;
+    //border: 1px solid #000;
+    //width: calc(100% - 60px);
+    //overflow: hidden;
+    position: relative;
+
+    .flex-box {
+      margin: 0;
+      //width: 2470px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+
+      .btn {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background-color: rgb(252, 224, 0) ;
+        outline: none;
+
+        &:hover {
+          background-color: rgb(222, 200, 0);
+        }
+      }
+
+      .btn.btn-r {
+        top: calc(50% - 25px);
+        right: 15px;
+      }
+
+      .btn.btn-l {
+        top: calc(50% - 25px);
+        left: 15px
+      }
+    }
+  }
+}
+

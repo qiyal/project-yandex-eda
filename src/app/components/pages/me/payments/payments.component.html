@@ -1,0 +1,31 @@
+<div class="body">
+
+  <div class="card-box">
+
+    <div class="credit-card">
+
+    </div>
+
+    <button (click)="showAddCardBox = !showAddCardBox">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+      Add new card
+    </button>
+
+    <div class="adding-card-box" *ngIf="showAddCardBox">
+      <div ngForm [formGroup]="cardForm"  >
+        <label>Card Number
+          <input type="text" formControlName="cardNumber">
+        </label>
+        <label>
+          Data:
+          <input type="text" formControlName="data">
+        </label>
+        <label>CVC
+          <input type="text" formControlName="cvc">
+        </label>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+.body {
+  padding: 70px 250px;
+
+  .card-box {
+    display: flex;
+    justify-content: center;
+
+    button {
+      display: flex;
+      padding: 15px 25px;
+      align-items: center;
+      font-size: 1.2rem;
+      border: none;
+      background-color: #ffe245;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fffb3e;
+      }
+
+      mat-icon {}
+    }
+
+    .adding-card-box {
+
+    }
+  }
+}

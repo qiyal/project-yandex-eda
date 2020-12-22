@@ -1,0 +1,30 @@
+<div class="cart">
+
+  <div class="cart-body">
+    <div class="cart-title">
+      Мой заказ
+    </div>
+
+    <div class="cart-items">
+
+      <div class="cart-item" *ngFor="let item of getItems()">
+        <div>
+          {{item.item.name}}
+        </div>
+        <div>
+          {{item.q}}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cart-info">
+      <div><span>Итого: </span> {{ getTotalCost() }} ₸</div>
+    </div>
+  </div>
+
+  <div class="cart-btn">
+    <button>Оформить заказ</button>
+  </div>
+
+</div>

@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Edit personal info</h2>
+
+<mat-dialog-content class="mat-typography">
+  <label>First Name:
+    <input type="text" [(ngModel)]="data.customer.firstName" placeholder="First Name">
+  </label>
+
+  <br>
+  <br>
+
+  <label>Last Name:
+    <input type="text" [(ngModel)]="data.customer.lastName" placeholder="First Name">
+  </label>
+
+  <br>
+
+  <h4>Genre: </h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose an option</mat-label>
+    <mat-select [ngModel]="data.customer.genre">
+      <mat-option value="male">Male</mat-option>
+      <mat-option value="female">Female</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close class="cancel-btn">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" class="save-btn">SAVE</button>
+</mat-dialog-actions>

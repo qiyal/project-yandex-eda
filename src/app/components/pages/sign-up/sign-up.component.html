@@ -1,0 +1,58 @@
+<div class="body">
+
+  <div class="main">
+
+    <p class="sign" align="center">Sign Up</p>
+
+    <form class="form1" [formGroup]="form" (ngSubmit)="createCustomer()">
+
+      <input class="un " type="text" align="center" placeholder="First Name" formControlName="firstName" required>
+      <div class="valid" *ngIf="form.get('firstName').invalid && (form.get('firstName').dirty || form.get('firstName').touched)">
+        <span *ngIf="form.get('firstName').errors.required">
+          First Name is required.
+        </span>
+      </div>
+
+      <input class="un " type="email" align="center" placeholder="Email" formControlName="email" required email>
+      <div class="valid" *ngIf="form.get('email').invalid && (form.get('email').dirty || form.get('email').touched)">
+        <span *ngIf="form.get('email').errors.required">
+          Email is required.
+        </span>
+        <span *ngIf="form.get('email').errors.email">
+          Email format is not correct.
+        </span>
+      </div>
+
+      <input class="un " type="text" align="center" placeholder="Phone number" formControlName="phoneNumber" required>
+      <div class="valid" *ngIf="form.get('phoneNumber').invalid && (form.get('phoneNumber').dirty || form.get('phoneNumber').touched)">
+        <span *ngIf="form.get('phoneNumber').errors.required">
+          Phone Number is required.
+        </span>
+      </div>
+
+      <input class="pass" type="password" align="center" placeholder="Password" formControlName="password" required>
+      <div class="valid" *ngIf="form.get('password').invalid && (form.get('password').dirty || form.get('password').touched)">
+        <span *ngIf="form.get('password').errors.required">
+          Password is required.
+        </span>confirmPassword
+      </div>
+
+      <input class="pass" type="password" align="center" placeholder="Confirm password" formControlName="confirmPassword" required>
+      <div class="valid" *ngIf="form.get('confirmPassword').invalid && (form.get('confirmPassword').dirty || form.get('confirmPassword').touched)">
+        <span *ngIf="form.get('confirmPassword').errors.required">
+          Confirm Password is required.
+        </span>
+      </div>
+      <div class="valid" *ngIf="(form.get('password').valid && form.get('confirmPassword').valid) && !passwordsValid()">
+        <span>
+          Confirm Password is not correct.
+        </span>
+      </div>
+
+      <button class="submit" align="center">Sign up</button>
+      <p class="forgot" align="center"><a routerLink="/sign-in">sign in</a></p>
+    </form>
+
+  </div>
+
+</div>
