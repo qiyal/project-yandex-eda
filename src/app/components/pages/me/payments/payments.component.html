@@ -2,8 +2,12 @@
 
   <div class="card-box">
 
-    <div class="credit-card">
-      <div *ngFor="let card of cards">{{card.cardNumber}}</div>
+
+    <div>
+      <h2>Credit Cards</h2>
+      <div class="credit-card">
+        <app-credit-card [style.margin-bottom]="'15px'" *ngFor="let card of cards" [creditCard]="card" (deleteId)="deleteCard($event)"></app-credit-card>
+      </div>
     </div>
 
     <button class="add-new-card" (click)="toogleAddNewBtn()">

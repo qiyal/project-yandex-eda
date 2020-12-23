@@ -15,11 +15,15 @@ export class CreditCardService {
     return this.http.get<Card[]>(this.api + `?userId=${userId}`);
   }
 
-  getCreditCardByNumber(cardNumber: number): Observable<Card[]> {
-    return this.http.get<Card[]>(this.api + `?cardNumber=${cardNumber}`);
+  getCreditCardByNumber(cardNumber: number, userId: number): Observable<Card[]> {
+    return this.http.get<Card[]>(this.api + `?userId=${userId}&cardNumber=${cardNumber}`);
   }
 
   postCart(card: Card): Observable<Card> {
     return this.http.post<Card>(this.api, card);
+  }
+
+  deleteCard(cardId: number): Observable<Card> {
+    return this.http.delete<Card>(this.api + `/${cardId}`);
   }
 }

@@ -4,6 +4,7 @@ import {SignInComponent} from './components/pages/sign-in/sign-in.component';
 import {SignUpComponent} from './components/pages/sign-up/sign-up.component';
 import {HomeComponent} from './components/pages/home/home.component';
 import {ProfilePageGuard} from './guard/profile-page.guard';
+import {ProfilePageChildGuard} from './guard/profile-page-child.guard';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {
     path: 'me',
     canActivate: [ProfilePageGuard],
+    canActivateChild: [ProfilePageChildGuard],
     loadChildren: () => import('./modules/me/me.module').then(m => m.MeModule)
   },
   {

@@ -1,0 +1,38 @@
+.credit-card {
+  background-color: #ffe245;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.credit-card-info {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+
+  div {
+    margin: 5px;
+  }
+}
+
+span {
+  font-size: 16px;
+  line-height: 14px;
+  font-weight: bold;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+
+  button {
+    display: block;
+    padding: 5px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+  }
+}

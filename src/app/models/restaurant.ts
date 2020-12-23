@@ -6,6 +6,7 @@ export class Restaurant {
     public freeDeliveryValue: number,
     public deliverValue: number,
     public rating: number,
-    public productList: string[]
+    public productList: string[],
+    public imageUrl: string
   ) {}
 }

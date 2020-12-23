@@ -23,7 +23,7 @@ export class PaymentsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
+    this.getUserCards();
   }
 
   getUserCards() {
@@ -54,7 +54,8 @@ export class PaymentsComponent implements OnInit {
   }
 
   addCart() {
-    this.cardService.getCreditCardByNumber(this.cardForm.get('cardNumber').value).subscribe(res1 => {
+    const userId = +localStorage.getItem('userId');
+    this.cardService.getCreditCardByNumber(this.cardForm.get('cardNumber').value, userId).subscribe(res1 => {
       const ans1 = res1;
 
       if (ans1.length === 0) {
@@ -62,8 +63,15 @@ export class PaymentsComponent implements OnInit {
 
         this.cardService.postCart(new Card(null, this.cardForm.get('cardNumber').value, this.cardForm.get('data').value, this.cardForm.get('cvc').value, userId)).subscribe(res2 => {
           this.getUserCards();
+          this.showAddCardBox = false;
         });
       }
+    });
+  }
+
+  deleteCard(id: number) {
+    this.cardService.deleteCard(id).subscribe(() => {
+      this.getUserCards();
     });
   }
 }

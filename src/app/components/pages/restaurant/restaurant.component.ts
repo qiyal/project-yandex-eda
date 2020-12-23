@@ -13,7 +13,7 @@ import {Item} from "../../../models/item";
   styleUrls: ['./restaurant.component.scss']
 })
 export class RestaurantComponent implements OnInit {
-  imageUrl = 'url("assets/images/food/card-photo/food1.jpg")';
+  imageUrl;
   tabIndex = 0;
   restaurantId;
   restaurant: Restaurant;
@@ -36,6 +36,8 @@ export class RestaurantComponent implements OnInit {
   getRestaurant() {
     this.restaurantService.getRestaurantById(this.restaurantId).subscribe(res => {
       this.restaurant = res;
+
+      this.imageUrl = `url("${this.restaurant.imageUrl}")`;
 
       for (const tag of this.restaurant.productList) {
         const link = `/${tag}`;

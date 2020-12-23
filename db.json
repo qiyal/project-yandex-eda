@@ -36,7 +36,8 @@
         "sets",
         "sushi",
         "drinks"
-      ]
+      ],
+      "imageUrl": "assets/images/food/card-photo/food1.jpg"
     },
     {
       "id": 2,
@@ -48,7 +49,8 @@
       "productList": [
         "combos",
         "burgers"
-      ]
+      ],
+      "imageUrl": "assets/images/food/card-photo/food3.jpg"
     },
     {
       "id": 3,
@@ -60,7 +62,8 @@
       "productList": [
         "coffees",
         "teas"
-      ]
+      ],
+      "imageUrl": "assets/images/food/card-photo/food2.jpg"
     },
     {
       "id": 4,
@@ -72,7 +75,8 @@
       "productList": [
         "burgers",
         "drinks"
-      ]
+      ],
+      "imageUrl": "assets/images/food/card-photo/food4.jpg"
     },
     {
       "id": 5,
@@ -84,7 +88,8 @@
       "productList": [
         "burgers",
         "pizza"
-      ]
+      ],
+      "imageUrl": "assets/images/food/card-photo/food5.jpeg"
     },
     {
       "id": 6,
@@ -96,7 +101,8 @@
       "productList": [
         "sets",
         "sushi"
-      ]
+      ],
+      "imageUrl": "assets/images/food/card-photo/food5.jpg"
     }
   ],
   "sets": [
@@ -564,9 +570,9 @@
   ],
   "creditCards": [
     {
-      "id": 1,
-      "cardNumber": "1234124312412423",
-      "data": "11/11",
+      "id": 3,
+      "cardNumber": "1111222233334444",
+      "data": "12/22",
       "cvc": "123",
       "userId": 1
     }
