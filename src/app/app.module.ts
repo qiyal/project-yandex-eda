@@ -25,6 +25,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {RestaurantService} from "./services/restaurant.service";
 import {OrderService} from './services/order.service';
+import { SearchComponent } from './components/part/search/search.component';
+import {CreditCardService} from './services/credit-card.service';
 
 @NgModule({
     declarations: [
@@ -36,7 +38,8 @@ import {OrderService} from './services/order.service';
         HomeComponent,
         RestaurantCardComponent,
         CarouselComponent,
-        ProfileInfoEditComponent
+        ProfileInfoEditComponent,
+        SearchComponent
     ],
     imports: [
         BrowserModule,
@@ -57,7 +60,8 @@ import {OrderService} from './services/order.service';
       AvatarImageService,
       CustomerService,
       RestaurantService,
-      OrderService
+      OrderService,
+      CreditCardService
     ],
     bootstrap: [
         AppComponent

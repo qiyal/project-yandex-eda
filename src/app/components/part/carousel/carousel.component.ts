@@ -12,10 +12,7 @@ export class CarouselComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.showIndex);
-    console.log(this.restaurants[0]);
-  }
+  ngOnInit(): void {}
 
   nextSales() {
     if (this.restaurants.length > this.showIndex) {

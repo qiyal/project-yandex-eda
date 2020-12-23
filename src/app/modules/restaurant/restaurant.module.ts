@@ -8,6 +8,7 @@ import {FoodCardComponent} from "../../components/part/food-card/food-card.compo
 import {CartService} from "../../services/cart.service";
 import {ItemsService} from "../../services/items.service";
 import {CartComponent} from "../../components/part/cart/cart.component";
+import {SharedModule} from '../shared/shared.module';
 
 
 
@@ -17,12 +18,13 @@ import {CartComponent} from "../../components/part/cart/cart.component";
     FoodCardComponent,
     CartComponent
   ],
-  imports: [
-    CommonModule,
-    RestaurantRoutingModule,
-    MatIconModule,
-    MatMenuModule
-  ],
+    imports: [
+        CommonModule,
+        RestaurantRoutingModule,
+        MatIconModule,
+        MatMenuModule,
+        SharedModule
+    ],
   providers: [
     CartService,
     ItemsService

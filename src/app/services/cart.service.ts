@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {Item} from "../models/item";
 import {CartMap} from '../models/cart-map';
 import {Order} from '../models/order';
-import {ItemQMap} from '../models/item-q-map';
 import {OrderService} from './order.service';
 import {Router} from '@angular/router';
 import {InOrderItem} from '../models/in-order-item';

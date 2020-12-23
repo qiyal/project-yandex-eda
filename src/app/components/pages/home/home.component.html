@@ -10,26 +10,23 @@
           <mat-chip [ngClass]="{'is-select': isSelect('burgers')}" (click)="setSelect('burgers')">Burgers</mat-chip>
           <mat-chip [ngClass]="{'is-select': isSelect('sushi')}" (click)="setSelect('sushi')">Sushi</mat-chip>
           <mat-chip [ngClass]="{'is-select': isSelect('pizza')}" (click)="setSelect('pizza')">Pizza</mat-chip>
+          <mat-chip [ngClass]="{'is-select': isSelect('coffees')}" (click)="setSelect('coffees')">Coffee</mat-chip>
+          <mat-chip [ngClass]="{'is-select': isSelect('teas')}" (click)="setSelect('teas')">Tea</mat-chip>
         </mat-chip-list>
 
       </div>
 
-      <div class="search-box">
-        <div class="input-box">
-          <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
-          <input type="text" [(ngModel)]="search" placeholder="Название, кухня или блюдо">
-        </div>
-      </div>
+      <app-search></app-search>
 
       <div class="carousel-box">
-        <app-carousel [restaurants]="sales"></app-carousel>
+        <app-carousel [restaurants]="populars"></app-carousel>
       </div>
 
       <div class="food-flex-box">
         <h2>Restaurants</h2>
 
         <div class="card-box">
-          <app-restaurant-card style="margin-bottom: 30px" *ngFor="let restaurant of restaurants" [restaurant]="restaurant"></app-restaurant-card>
+          <app-restaurant-card [routerLink]="['/restaurant', restaurant.id]" style="margin-bottom: 30px" *ngFor="let restaurant of restaurants" [restaurant]="restaurant"></app-restaurant-card>
         </div>
       </div>
 

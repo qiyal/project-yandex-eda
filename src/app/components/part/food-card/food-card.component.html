@@ -1,8 +1,8 @@
 <div class="food-card-body">
 
   <div class="card-title">
-    <h3>{{item.name}} <span>{{item.mass}} г</span></h3>
-    <span>{{item.price}} ₸</span>
+    <h3>{{item.name}} <span>{{item.mass | convertPhysicsValues : item.value}}</span></h3>
+    <span>{{item.price | currency : 'KZ'}}</span>
   </div>
 
   <div class="card-description" *ngIf="item.description">

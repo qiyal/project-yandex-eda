@@ -49,6 +49,54 @@
         "combos",
         "burgers"
       ]
+    },
+    {
+      "id": 3,
+      "name": "Coffeessimo",
+      "limit": 1500,
+      "freeDeliveryValue": 1500,
+      "deliverValue": 1400,
+      "rating": 4.8,
+      "productList": [
+        "coffees",
+        "teas"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Burger Station",
+      "limit": 1500,
+      "freeDeliveryValue": 1500,
+      "deliverValue": 1400,
+      "rating": 3.8,
+      "productList": [
+        "burgers",
+        "drinks"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Шеф Бургер",
+      "limit": 1500,
+      "freeDeliveryValue": 1500,
+      "deliverValue": 1400,
+      "rating": 4.7,
+      "productList": [
+        "burgers",
+        "pizza"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Киото Суши",
+      "limit": 1500,
+      "freeDeliveryValue": 1500,
+      "deliverValue": 1400,
+      "rating": 4.4,
+      "productList": [
+        "sets",
+        "sushi"
+      ]
     }
   ],
   "sets": [
@@ -57,6 +105,7 @@
       "restaurantId": 1,
       "name": "Сет Киото",
       "mass": 900,
+      "value": "g",
       "price": 3990,
       "description": "Филадельфия, Сяке темпура, Эби темпура, Цезарь хот, Кола (1 л)",
       "imageUrl": "assets/images/food/card-food/item1.jpeg"
@@ -66,6 +115,7 @@
       "restaurantId": 1,
       "name": "Сет Нори",
       "mass": 1300,
+      "value": "g",
       "price": 5390,
       "description": "Филадельфия, Америка, Бонито, Цезарь темпура, Сяке маке, Гунканы (2 шт.), Кола (1 л)",
       "imageUrl": "assets/images/food/card-food/item2.jpeg"
@@ -75,9 +125,30 @@
       "restaurantId": 1,
       "name": "Сет Токио",
       "mass": 2800,
+      "value": "g",
       "price": 7990,
       "description": "Филадельфия, Эби темпура, Калифорния, Цезарь хот, Амстердам, Гункан, Капа Маки, Сяке Маки, Токио хот, Cola (1 л)",
       "imageUrl": "assets/images/food/card-food/item3.jpeg"
+    },
+    {
+      "id": 4,
+      "restaurantId": 6,
+      "name": "Сет Мацури",
+      "mass": 1020,
+      "value": "g",
+      "price": 9990,
+      "description": "Ролл Фила Де Люкс (6шт.), Ролл Аквамен (6шт.), Ролл Канадский (6шт.), Ролл Чука (6шт.)",
+      "imageUrl": "assets/images/food/card-food/item18.jpeg"
+    },
+    {
+      "id": 5,
+      "restaurantId": 6,
+      "name": "Сет Покемон",
+      "mass": 850,
+      "value": "g",
+      "price": 9990,
+      "description": "Запеченный лосось (4 шт.), Запеченный тунец (4 шт.), Запеченный угорь (4 шт.), Запеченная креветка (4 шт.), Запеченный краб (4 шт.)",
+      "imageUrl": "assets/images/food/card-food/item19.jpeg"
     }
   ],
   "sushi": [
@@ -86,6 +157,7 @@
       "restaurantId": 1,
       "name": "Филадельфия",
       "mass": 220,
+      "value": "g",
       "price": 1490,
       "description": "Рис, нори, сыр креметте, норвежская семга",
       "imageUrl": "assets/images/food/card-food/item4.jpeg"
@@ -95,9 +167,30 @@
       "restaurantId": 1,
       "name": "Цезарь темпура",
       "mass": 250,
+      "value": "g",
       "price": 1490,
       "description": "Рис, нори, курица, помидор, майонез, терияки соус",
       "imageUrl": "assets/images/food/card-food/item5.jpeg"
+    },
+    {
+      "id": 3,
+      "restaurantId": 6,
+      "name": "Суши с креветкой",
+      "mass": 65,
+      "value": "g",
+      "price": 990,
+      "description": "Креветки, рис (2 шт.)",
+      "imageUrl": "assets/images/food/card-food/item20.jpeg"
+    },
+    {
+      "id": 4,
+      "restaurantId": 6,
+      "name": "Суши с лососем",
+      "mass": 65,
+      "value": "g",
+      "price": 990,
+      "description": "Лосось, рис (2 шт.)",
+      "imageUrl": "assets/images/food/card-food/item21.jpeg"
     }
   ],
   "drinks": [
@@ -106,6 +199,7 @@
       "restaurantId": 1,
       "name": "Coca-Cola",
       "mass": 1000,
+      "value": "l",
       "price": 490,
       "description": "",
       "imageUrl": "assets/images/food/card-food/item6.jpeg"
@@ -115,6 +209,7 @@
       "restaurantId": 1,
       "name": "Coca-Cola",
       "mass": 1000,
+      "value": "l",
       "price": 490,
       "description": "",
       "imageUrl": "assets/images/food/card-food/item7.jpeg"
@@ -124,9 +219,30 @@
       "restaurantId": 1,
       "name": "Coca-Cola",
       "mass": 1000,
+      "value": "l",
       "price": 490,
       "description": "",
       "imageUrl": "assets/images/food/card-food/item8.jpeg"
+    },
+    {
+      "id": 4,
+      "restaurantId": 4,
+      "name": "Lipton Лимон",
+      "mass": 500,
+      "value": "l",
+      "price": 300,
+      "description": "",
+      "imageUrl": ""
+    },
+    {
+      "id": 5,
+      "restaurantId": 4,
+      "name": "Минеральная вода Asu",
+      "mass": 500,
+      "value": "l",
+      "price": 300,
+      "description": "",
+      "imageUrl": ""
     }
   ],
   "combos": [
@@ -135,6 +251,7 @@
       "restaurantId": 2,
       "name": "Комбо Бургер Мистер",
       "mass": 340,
+      "value": "g",
       "price": 1800,
       "description": "Бургер Мистер с говядиной, картофель фри малый, напиток на выбор",
       "imageUrl": ""
@@ -144,6 +261,7 @@
       "restaurantId": 2,
       "name": "Комбо Бургер Мачо",
       "mass": 340,
+      "value": "g",
       "price": 1400,
       "description": "Бургер Мачо с говяжьей котлетой, картофель фри малый, напиток на выбор",
       "imageUrl": ""
@@ -153,6 +271,7 @@
       "restaurantId": 2,
       "name": "Комбо Чизбургер Мачо",
       "mass": 340,
+      "value": "g",
       "price": 1500,
       "description": "Чизбургер Мачо с говяжьей котлетой, картофель фри малый, напиток на выбор",
       "imageUrl": ""
@@ -164,6 +283,7 @@
       "restaurantId": 2,
       "name": "Бургер Мистер",
       "mass": 220,
+      "value": "g",
       "price": 1200,
       "description": "Рубленая говяжья нарезка, лист салата, помидор, огурец, булочка, кетчуп, майонез",
       "imageUrl": "assets/images/food/card-food/item9.jpeg"
@@ -173,6 +293,7 @@
       "restaurantId": 2,
       "name": "Бургер Мачо",
       "mass": 220,
+      "value": "g",
       "price": 900,
       "description": "Говяжья котлета, лист салата, помидор, огурец, булочка, кетчуп, майонез",
       "imageUrl": "assets/images/food/card-food/item10.jpeg"
@@ -182,9 +303,156 @@
       "restaurantId": 2,
       "name": "Чизбургер Мачо",
       "mass": 220,
+      "value": "g",
       "price": 1000,
       "description": "Говяжья котлета, сыр, лист салата, помидор, огурец, булочка, кетчуп, майонез",
       "imageUrl": "assets/images/food/card-food/item11.jpeg"
+    },
+    {
+      "id": 4,
+      "restaurantId": 4,
+      "name": "Бургер Масала Чикен",
+      "mass": 190,
+      "value": "g",
+      "price": 990,
+      "description": "Устричный соус, острый соус шрирача, листья салата, помидор, булка бриошь",
+      "imageUrl": ""
+    },
+    {
+      "id": 5,
+      "restaurantId": 4,
+      "name": "Чизбургер",
+      "mass": 210,
+      "value": "g",
+      "price": 990,
+      "description": "Сырный бургер, сыр чеддер, котлета из мраморной говядины, булка бриошь, маковая паста, соус барбекю, помидор, измельченный лист салата айсберг",
+      "imageUrl": ""
+    },
+    {
+      "id": 6,
+      "restaurantId": 4,
+      "name": "Бургер Каримен",
+      "mass": 220,
+      "value": "g",
+      "price": 990,
+      "description": "Бургер с соусом карри, креметте, таиландской пастой и чесноком. Булка бриошь, котлета из мраморной говядины, маковая паста, измельченный лист салата айсберг, помидор",
+      "imageUrl": ""
+    },
+    {
+      "id": 7,
+      "restaurantId": 5,
+      "name": "Бургер говяжий",
+      "mass": 300,
+      "value": "g",
+      "price": 1190,
+      "description": "Булочка, котлета говяжья, помидоры, листья салата, соус для бургера, соус тартар",
+      "imageUrl": "assets/images/food/card-food/item13.jpeg"
+    },
+    {
+      "id": 8,
+      "restaurantId": 5,
+      "name": "Бургер говяжий Двойной",
+      "mass": 390,
+      "value": "g",
+      "price": 1690,
+      "description": "Булочка, котлета говяжья, помидоры, листья салата, соус для бургера, соус тартар",
+      "imageUrl": "assets/images/food/card-food/item14.jpeg"
+    },
+    {
+      "id": 9,
+      "restaurantId": 5,
+      "name": "Бургер куриный",
+      "mass": 300,
+      "value": "g",
+      "price": 990,
+      "description": "Булочка, котлета куриная, помидоры, листья салата, соус для бургера, соус тартар",
+      "imageUrl": "assets/images/food/card-food/item15.jpeg"
+    }
+  ],
+  "coffees": [
+    {
+      "id": 1,
+      "restaurantId": 3,
+      "name": "Кофе Латте",
+      "mass": 350,
+      "value": "l",
+      "price": 700,
+      "description": "Эспрессо со взбитым молоком",
+      "imageUrl": "assets/images/food/card-food/item12.jpeg"
+    },
+    {
+      "id": 2,
+      "restaurantId": 3,
+      "name": "Капучино",
+      "mass": 350,
+      "value": "l",
+      "price": 700,
+      "description": "Двойной эспрессо со взбитым молоком. Объем на выбор",
+      "imageUrl": "assets/images/food/card-food/item12.jpeg"
+    },
+    {
+      "id": 3,
+      "restaurantId": 3,
+      "name": "Американо",
+      "mass": 350,
+      "value": "l",
+      "price": 600,
+      "description": "Двойной эспрессо с добавлением воды. Объем на выбор",
+      "imageUrl": "assets/images/food/card-food/item12.jpeg"
+    }
+  ],
+  "teas": [
+    {
+      "id": 1,
+      "restaurantId": 3,
+      "name": "Чай облепиховый с медом",
+      "mass": 350,
+      "value": "l",
+      "price": 350,
+      "description": "Черный чай, облепиха, мед",
+      "imageUrl": "assets/images/food/card-food/item12.jpeg"
+    },
+    {
+      "id": 2,
+      "restaurantId": 3,
+      "name": "Чай Мятный с мёдом",
+      "mass": 350,
+      "value": "l",
+      "price": 350,
+      "description": "Черный чай, лимон, мята, мёд",
+      "imageUrl": "assets/images/food/card-food/item12.jpeg"
+    },
+    {
+      "id": 3,
+      "restaurantId": 3,
+      "name": "Чай Имбирный с мёдом",
+      "mass": 350,
+      "value": "l",
+      "price": 350,
+      "description": "Чай Имбирный с мёдом",
+      "imageUrl": "assets/images/food/card-food/item12.jpeg"
+    }
+  ],
+  "pizza": [
+    {
+      "id": 1,
+      "restaurantId": 5,
+      "name": "Пицца вегетарианская",
+      "mass": 440,
+      "value": "g",
+      "price": 1990,
+      "description": "Сыр моцарелла, соус для пиццы, маслины, оливки, кукуруза, брокколи (30 см)",
+      "imageUrl": "assets/images/food/card-food/item16.jpeg"
+    },
+    {
+      "id": 2,
+      "restaurantId": 5,
+      "name": "Пицца Горгонзола с грушей",
+      "mass": 420,
+      "value": "g",
+      "price": 2190,
+      "description": "Сыр моцарелла, сливки, сыр с плесенью, кедровый орех, мед, груша (30 см)",
+      "imageUrl": "assets/images/food/card-food/item17.jpeg"
     }
   ],
   "orders": [
@@ -228,6 +496,79 @@
         }
       ],
       "cost": 4000
+    },
+    {
+      "id": 3,
+      "customersId": 1,
+      "date": "2020-12-22T21:56:36.866Z",
+      "items": [
+        {
+          "itemName": "Капучино",
+          "itemQ": 1,
+          "itemPrice": 700
+        },
+        {
+          "itemName": "Кофе Латте",
+          "itemQ": 1,
+          "itemPrice": 700
+        },
+        {
+          "itemName": "Чай облепиховый с медом",
+          "itemQ": 2,
+          "itemPrice": 350
+        }
+      ],
+      "cost": 2100
+    },
+    {
+      "id": 4,
+      "customersId": 1,
+      "date": "2020-12-22T22:16:06.205Z",
+      "items": [
+        {
+          "itemName": "Бургер говяжий",
+          "itemQ": 1,
+          "itemPrice": 1190
+        },
+        {
+          "itemName": "Бургер говяжий Двойной",
+          "itemQ": 1,
+          "itemPrice": 1690
+        },
+        {
+          "itemName": "Бургер куриный",
+          "itemQ": 1,
+          "itemPrice": 990
+        }
+      ],
+      "cost": 3870
+    },
+    {
+      "id": 5,
+      "customersId": 1,
+      "date": "2020-12-22T22:24:12.363Z",
+      "items": [
+        {
+          "itemName": "Суши с лососем",
+          "itemQ": 1,
+          "itemPrice": 990
+        },
+        {
+          "itemName": "Сет Мацури",
+          "itemQ": 1,
+          "itemPrice": 9990
+        }
+      ],
+      "cost": 10980
+    }
+  ],
+  "creditCards": [
+    {
+      "id": 1,
+      "cardNumber": "1234124312412423",
+      "data": "11/11",
+      "cvc": "123",
+      "userId": 1
     }
   ]
 }

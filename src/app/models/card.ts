@@ -3,6 +3,7 @@ export class Card {
     public id: number,
     public cardNumber: string,
     public data: string,
-    public cvc: string
+    public cvc: string,
+    public userId: number
   ) {}
 }

@@ -3,27 +3,61 @@
   <div class="card-box">
 
     <div class="credit-card">
-
+      <div *ngFor="let card of cards">{{card.cardNumber}}</div>
     </div>
 
-    <button (click)="showAddCardBox = !showAddCardBox">
+    <button class="add-new-card" (click)="toogleAddNewBtn()">
       <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
       Add new card
     </button>
 
     <div class="adding-card-box" *ngIf="showAddCardBox">
-      <div ngForm [formGroup]="cardForm"  >
-        <label>Card Number
+      <form [formGroup]="cardForm" (ngSubmit)="addCart()">
+
+        <label>
+          Card Number
           <input type="text" formControlName="cardNumber">
         </label>
+
+        <div *ngIf="cardForm.get('cardNumber').invalid && (cardForm.get('cardNumber').dirty || cardForm.get('cardNumber').touched)">
+          <div *ngIf="cardForm.get('cardNumber').errors.required">
+            Card Number required.
+          </div>
+          <div *ngIf="cardForm.get('cardNumber').errors.pattern">
+            Card Number valid.
+          </div>
+        </div>
+
         <label>
           Data:
           <input type="text" formControlName="data">
         </label>
-        <label>CVC
+
+        <div *ngIf="cardForm.get('data').invalid && (cardForm.get('data').dirty || cardForm.get('data').touched)">
+          <div *ngIf="cardForm.get('data').errors.required">
+            Data required.
+          </div>
+          <div *ngIf="cardForm.get('data').errors.pattern">
+            Data Number valid.
+          </div>
+        </div>
+
+        <label>
+          CVC
           <input type="text" formControlName="cvc">
         </label>
-      </div>
+
+        <div *ngIf="cardForm.get('cvc').invalid && (cardForm.get('cvc').dirty || cardForm.get('cvc').touched)">
+          <div *ngIf="cardForm.get('cvc').errors.required">
+            CVC required.
+          </div>
+          <div *ngIf="cardForm.get('cvc').errors.pattern">
+            CVC Number valid.
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="cardForm.invalid">Add</button>
+      </form>
     </div>
 
   </div>

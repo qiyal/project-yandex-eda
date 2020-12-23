@@ -1,0 +1,52 @@
+.search-box {
+  box-sizing: border-box;
+  padding: 20px 100px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+
+  .input-box {
+    position: relative;
+
+    mat-icon {
+      position: absolute;
+      left: 10px;
+      top: 25%;
+    }
+
+    input {
+      box-sizing: border-box;
+      padding: 15px 40px;
+      width: 100%;
+      border: 1px solid #e8e8e8;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  }
+}
+
+.search-ans {
+  z-index: 100;
+  position: absolute;
+  top: calc(100% - 20px);
+  left: 0;
+  //background-color: #ec2427;
+  width: calc(100% - 200px);
+  max-height: 600px;
+  margin: 0 100px;
+  overflow-y: scroll;
+}
+
+.message {
+  padding: 20px;
+  background-color: #eee;
+}
+
+.ans-res {
+  padding: 20px;
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
+.even {
+  background-color: #e9ecf0;
+}

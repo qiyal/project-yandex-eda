@@ -1,0 +1,14 @@
+<div class="search-box">
+
+  <div class="input-box">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">search</mat-icon>
+    <input type="text" [(ngModel)]="search" placeholder="Название, кухня или блюдо" (input)="find()">
+  </div>
+
+  <div class="search-ans" *ngIf="search">
+    <div class="message" *ngIf="answer.length === 0">Ничего не найдено</div>
+
+    <div class="ans-res" [routerLink]="['/restaurant', res.id]" *ngFor="let res of answer; let even_ = even" [ngClass]="{'even': even_}">{{res.name}}</div>
+  </div>
+
+</div>

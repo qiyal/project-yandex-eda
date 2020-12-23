@@ -50,10 +50,10 @@
 
                         <h3>Условия доставки</h3>
                         <p class="grey">Доставку выполнят партнёры Яндекс.Еды</p>
-                        <p class="p-flex"><span>а заказ от {{restaurant.limit}} ₸</span> <span>0 ₸</span></p>
+                        <p class="p-flex"><span>а заказ от {{restaurant.limit | currency : 'KZ'}}</span> <span>{{ 0 | currency : 'KZ'}}</span></p>
 
                         <h3>Лимиты</h3>
-                        <p>Минимальная стоимость заказа {{restaurant.limit}} ₸</p>
+                        <p>Минимальная стоимость заказа {{restaurant.limit | currency : 'KZ'}}</p>
                       </button>
                     </mat-menu>
 
@@ -61,7 +61,7 @@
 
                   <div class="price-deliver">
                     <span [style.font-size]="'14px'">Заказ от</span>
-                    <span [style.font-size]="'16px'">{{restaurant.freeDeliveryValue}} ₸</span>
+                    <span [style.font-size]="'16px'">{{restaurant.freeDeliveryValue | currency : 'KZ'}}</span>
                   </div>
 
                 </div>
@@ -97,13 +97,12 @@
           <div class="menus-box">
 
             <div class="menu-tabs">
-<!--              <span [ngClass]="{'active-tab': tabIndex === 1}" (click)="tabIndex = 1">Сеты</span>-->
-              <a [href]="'/restaurant/' + restaurantId + '#' + tag.tagName"   *ngFor="let tag of products; let i = index" [ngClass]="{'active-tab': tabIndex === i}" (click)="tabIndex = i">{{ tag.tagName }}</a>
+              <a [href]="'/restaurant/' + restaurantId + '#' + tag.tagName"   *ngFor="let tag of products; let i = index" [ngClass]="{'active-tab': tabIndex === i}" (click)="tabIndex = i">{{ tag.tagName | transformFirstCharToUppercase}}</a>
             </div>
 
             <div class="menu-item-list">
               <div *ngFor="let product of products">
-                <h2 [id]="product.tagName">{{product.tagName}}</h2>
+                <h2 [id]="product.tagName">{{product.tagName | transformFirstCharToUppercase}}</h2>
 
                 <div class="list-of-items">
                   <app-food-card (click)="addToCart(item, product.tagName)" *ngFor="let item of product.items" [style.margin]="'15px 0'" [item]="item"></app-food-card>

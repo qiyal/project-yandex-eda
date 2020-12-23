@@ -1,5 +1,5 @@
 <div class="carousel-body">
-  <h2>Sales</h2>
+  <h2>Popular</h2>
 
   <div class="card-box">
     <div class="flex-box">
@@ -8,7 +8,7 @@
           <mat-icon>navigate_before</mat-icon>
         </button>
 
-      <app-restaurant-card [hidden]="!isShow(i)" *ngFor="let restaurant of restaurants; let i = index" [restaurant]="restaurant"></app-restaurant-card>
+      <app-restaurant-card [routerLink]="['/restaurant', restaurant.id]" [hidden]="!isShow(i)" *ngFor="let restaurant of restaurants; let i = index" [restaurant]="restaurant"></app-restaurant-card>
 
         <button class="btn btn-r" (click)="nextSales()" *ngIf="showIndex < restaurants.length">
           <mat-icon>navigate_next</mat-icon>
