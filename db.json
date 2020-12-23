@@ -566,6 +566,24 @@
         }
       ],
       "cost": 10980
+    },
+    {
+      "id": 6,
+      "customersId": 1,
+      "date": "2020-12-23T02:33:58.419Z",
+      "items": [
+        {
+          "itemName": "Чай Имбирный с мёдом",
+          "itemQ": 3,
+          "itemPrice": 350
+        },
+        {
+          "itemName": "Капучино",
+          "itemQ": 1,
+          "itemPrice": 700
+        }
+      ],
+      "cost": 1750
     }
   ],
   "creditCards": [
